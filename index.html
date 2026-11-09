@@ -1,0 +1,713 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="ar">
+<head>
+<meta charset="utf-8">
+<title>تقرير المقارنة التنافسية الشاملة - Smart ERP مقابل NEXORA Store</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap');
+
+  @page {
+    size: A4;
+    margin: 16mm 14mm 18mm 14mm;
+    @bottom-left {
+      content: "مشروع تخرج Smart ERP — دراسة المقارنة التنافسية";
+      font-family: 'Cairo', Tahoma, sans-serif;
+      font-size: 8pt;
+      color: #64748b;
+    }
+    @bottom-right {
+      content: "صفحة " counter(page);
+      font-family: 'Cairo', Tahoma, sans-serif;
+      font-size: 8pt;
+      font-weight: bold;
+      color: #1e3a8a;
+    }
+  }
+
+  body {
+    font-family: 'Cairo', 'Segoe UI', Tahoma, sans-serif;
+    color: #0f172a;
+    background-color: #ffffff;
+    line-height: 1.65;
+    font-size: 10pt;
+    margin: 0;
+    padding: 0;
+  }
+
+  .cover-page {
+    page-break-after: always;
+    text-align: center;
+    padding: 40px 20px 20px 20px;
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border: 3px double #1e3a8a;
+    box-sizing: border-box;
+  }
+
+  .cover-header {
+    border-bottom: 2px solid #e2e8f0;
+    padding-bottom: 20px;
+  }
+  .cover-header h3 {
+    margin: 0;
+    color: #475569;
+    font-size: 13pt;
+    font-weight: 600;
+  }
+  .cover-header h4 {
+    margin: 5px 0 0 0;
+    color: #64748b;
+    font-size: 11pt;
+  }
+
+  .cover-body {
+    margin: 40px 0;
+  }
+  .cover-title {
+    font-size: 24pt;
+    font-weight: 900;
+    color: #1e3a8a;
+    line-height: 1.3;
+    margin-bottom: 15px;
+  }
+  .cover-subtitle {
+    font-size: 14pt;
+    font-weight: 700;
+    color: #0f766e;
+    margin-bottom: 25px;
+  }
+  .cover-badge {
+    display: inline-block;
+    background: #f1f5f9;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    padding: 8px 18px;
+    font-size: 10pt;
+    font-weight: 700;
+    color: #334155;
+    margin-bottom: 20px;
+  }
+
+  .cover-systems {
+    display: flex;
+    justify-content: space-around;
+    margin: 30px 10px;
+    gap: 20px;
+  }
+  .system-box {
+    flex: 1;
+    padding: 15px;
+    background: #f8fafc;
+    border: 1px solid #cbd5e1;
+    border-radius: 10px;
+    text-align: right;
+  }
+  .system-box.primary {
+    border-top: 4px solid #1e3a8a;
+  }
+  .system-box.reference {
+    border-top: 4px solid #0f766e;
+  }
+  .system-box h5 {
+    margin: 0 0 8px 0;
+    font-size: 11pt;
+    color: #1e293b;
+  }
+  .system-box p {
+    margin: 3px 0;
+    font-size: 8.5pt;
+    color: #475569;
+  }
+
+  .cover-footer {
+    border-top: 2px solid #e2e8f0;
+    padding-top: 15px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 9.5pt;
+    color: #475569;
+  }
+
+  .page-break {
+    page-break-after: always;
+  }
+
+  h1, h2, h3, h4 {
+    font-family: 'Cairo', 'Segoe UI', Tahoma, sans-serif;
+    color: #1e3a8a;
+    page-break-after: avoid;
+  }
+  h1 {
+    font-size: 17pt;
+    font-weight: 800;
+    border-bottom: 2px solid #1e3a8a;
+    padding-bottom: 6px;
+    margin-top: 25px;
+    margin-bottom: 15px;
+  }
+  h2 {
+    font-size: 13pt;
+    font-weight: 700;
+    color: #0f766e;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    border-right: 4px solid #0f766e;
+    padding-right: 10px;
+  }
+  h3 {
+    font-size: 11pt;
+    font-weight: 700;
+    color: #1e293b;
+    margin-top: 15px;
+    margin-bottom: 8px;
+  }
+
+  p {
+    margin: 0 0 10px 0;
+    text-align: justify;
+  }
+
+  ul, ol {
+    margin: 0 0 12px 0;
+    padding-right: 22px;
+  }
+  li {
+    margin-bottom: 5px;
+  }
+
+  .alert-box {
+    background: #f8fafc;
+    border-right: 4px solid #1e3a8a;
+    border-radius: 6px;
+    padding: 10px 14px;
+    margin: 12px 0;
+    font-size: 9.5pt;
+  }
+  .alert-box.info {
+    border-right-color: #0284c7;
+    background: #f0f9ff;
+  }
+  .alert-box.warning {
+    border-right-color: #d97706;
+    background: #fffbeb;
+  }
+  .alert-box.success {
+    border-right-color: #10b981;
+    background: #ecfdf5;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 14px 0 20px 0;
+    font-size: 8.5pt;
+    page-break-inside: auto;
+  }
+  tr {
+    page-break-inside: avoid;
+    page-break-after: auto;
+  }
+  th {
+    background-color: #1e3a8a;
+    color: #ffffff;
+    font-weight: 700;
+    text-align: right;
+    padding: 7px 8px;
+    border: 1px solid #1e3a8a;
+  }
+  td {
+    padding: 6px 8px;
+    border: 1px solid #cbd5e1;
+    vertical-align: top;
+  }
+  tr:nth-child(even) td {
+    background-color: #f8fafc;
+  }
+
+  .status-tag {
+    display: inline-block;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-size: 7.5pt;
+    font-weight: 700;
+    white-space: nowrap;
+  }
+  .status-exists {
+    background: #dcfce7;
+    color: #15803d;
+    border: 1px solid #86efac;
+  }
+  .status-partial {
+    background: #fef9c3;
+    color: #854d0e;
+    border: 1px solid #fde047;
+  }
+  .status-none {
+    background: #fee2e2;
+    color: #b91c1c;
+    border: 1px solid #fca5a5;
+  }
+  .status-scope {
+    background: #e2e8f0;
+    color: #475569;
+    border: 1px solid #cbd5e1;
+  }
+
+  .code-badge {
+    font-family: Consolas, monospace;
+    background: #f1f5f9;
+    padding: 1px 4px;
+    border-radius: 3px;
+    font-size: 8pt;
+    color: #0f766e;
+    direction: ltr;
+    display: inline-block;
+  }
+
+  .workflow-step {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    padding: 12px;
+    margin-bottom: 12px;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.03);
+  }
+  .workflow-step h4 {
+    margin: 0 0 6px 0;
+    color: #1e3a8a;
+    font-size: 10pt;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .card-grid {
+    display: flex;
+    gap: 12px;
+    margin: 12px 0;
+  }
+  .card-item {
+    flex: 1;
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    padding: 10px;
+  }
+  .card-item h4 {
+    margin: 0 0 5px 0;
+    color: #0f766e;
+    font-size: 9.5pt;
+  }
+  .card-item p {
+    font-size: 8.5pt;
+    margin: 0;
+    color: #475569;
+  }
+</style>
+</head>
+<body>
+
+<!-- صفحة الغلاف -->
+<div class="cover-page">
+  <div class="cover-header">
+    <h3>مشروع تخرج نظم المعلومات وإدارة الأعمال</h3>
+    <h4>دراسة مقارنة تنافسية وهندسية شاملة</h4>
+  </div>
+
+  <div class="cover-body">
+    <div class="cover-badge">وثيقة المراجعة والتحليل الفني الشامل (Master Evaluation Report)</div>
+    <div class="cover-title">المقارنة التنافسية الشاملة<br/>بين نظام Smart ERP ونظام NEXORA Store المرجعي</div>
+    <div class="cover-subtitle">تحليل معماري ووظيفي دقيق لكافة الموديولات وهندسة الأنشطة التجارية</div>
+
+    <div class="cover-systems">
+      <div class="system-box primary">
+        <h5>النظام الأول: Smart ERP (مشروع التخرج)</h5>
+        <p><strong>النمط:</strong> منصة ويب سحابية حديثة (Web Client-Server)</p>
+        <p><strong>الواجهة الأمامية:</strong> React 18, TypeScript, Tailwind CSS, Vite</p>
+        <p><strong>الواجهة الخلفية:</strong> Django 6.0 REST Framework, Python 3.12</p>
+        <p><strong>قاعدة البيانات:</strong> PostgreSQL 15 عبر حاوية Docker</p>
+        <p><strong>الميزات الذكية:</strong> Ollama AI Local Container Integration</p>
+      </div>
+
+      <div class="system-box reference">
+        <h5>النظام الثاني: NEXORA Store v0.1.22 (المرجع التجاري)</h5>
+        <p><strong>النمط:</strong> تطبيق مكتبي محلي مستقل (Desktop Offline-First)</p>
+        <p><strong>الواجهة وإطار العمل:</strong> Electron Desktop, Chromium, Node.js</p>
+        <p><strong>قاعدة البيانات:</strong> محرك SQLite محلي مدمج (143 جدولاً)</p>
+        <p><strong>الترخيص والنسخ:</strong> بصمة عتاد اللوحة الأم + لقطات أمان مزدوجة</p>
+        <p><strong>المطور:</strong> منظومة للبرمجيات (Manzoma Software)</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="cover-footer">
+    <div><strong>مقدم للأستاذ المشرف:</strong> المشرف الأكاديمي لمشروع التخرج</div>
+    <div><strong>تاريخ الإصدار:</strong> نوفمبر 2026</div>
+    <div><strong>حالة الوثيقة:</strong> تقرير مراجعة فني معتمد</div>
+  </div>
+</div>
+
+<!-- بداية المحتوى -->
+
+<h1>1. المقدمة المنهجية وأهداف الدراسة</h1>
+<p>
+يأتي هذا التقرير استجابةً لمتطلبات تقييم مشروع تخرج <strong>Smart ERP</strong> من خلال إجراء دراسة مقارنة تنافسية واقعية مع أحد الأنظمة التجارية واسعة الانتشار في السوق المحلي المصري والعربي وهو <strong>NEXORA Store (الإصدار 0.1.22)</strong>.
+</p>
+
+<div class="alert-box info">
+<strong>الهدف الاستراتيجي من المقارنة:</strong>
+الانتقال بمشروع Smart ERP من نطاق "مشروع تخرج أكاديمي" إلى "منتج تجاري متكامل قابل للبيع والمنافسة"، عبر استلهام أفضل ممارسات السوق التجاري (Best Practices) في إدارة المخازن، تسعير المنتجات، تنظيم فواتير الكاشير، وتقفيل الورديات، مع الحفاظ على تفوق Smart ERP المعماري كمنصة ويب سحابية حديثة.
+</div>
+
+<h2>منهجية جمع الأدلة والنزاهة الفنية:</h2>
+<p>
+تم بناء هذا التقرير على فحص تقني محايد ومباشر دون أي تخمين أو ادعاءات تسويقية:
+</p>
+<ul>
+  <li><strong>فحص قاعدة بيانات NEXORA الفعلية:</strong> قراءة هيكل 143 جدولاً من نسخة الأمان المحلية <span class="code-badge">erp.sqlite</span> ومعرفة كافة الحقول والقيود.</li>
+  <li><strong>فحص سجلات النظام (Logs):</strong> سجلات الإقلاع والترخيص والنسخ الاحتياطي في نكسورا (<span class="code-badge">safety-snapshots.log</span> و <span class="code-badge">registration-debug.log</span>).</li>
+  <li><strong>فحص كود Smart ERP المصدري:</strong> مراجعة نماذج Django في <span class="code-badge">smart_erp_backend</span> وكافة واجهات React في <span class="code-badge">src/</span>.</li>
+  <li><strong>فحص قناة الشروحات الرسمية:</strong> استخراج البيانات الوصفية لخطة الكورس الـ 13 على يوتيوب، مع التمييز الصارم بين البيانات الوصفية وحقائق الكود المثبتة.</li>
+</ul>
+
+<div class="page-break"></div>
+
+<h1>2. المقارنة المعمارية والتقنية الشاملة</h1>
+<p>
+يمثل الجدول التالي تحليلاً هندسياً دقيقاً للفروق الجوهرية في البنية التحتية بين النظامين:
+</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="width: 22%;">المحور المعماري</th>
+      <th style="width: 39%;">نظام Smart ERP (مشروع التخرج)</th>
+      <th style="width: 39%;">نظام NEXORA Store (المرجع التجاري)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>النمط المعماري الأساسي</strong></td>
+      <td><strong>منصة ويب سحابية متعددة الطبقات (Web Client-Server)</strong><br/>تتيح الوصول المتزامن من أي متصفح، هاتف، أو فرع عبر الإنترنت أو الشبكة المحلية.</td>
+      <td><strong>تطبيق مكتبي محلي مستقل (Desktop Offline-First)</strong><br/>مثبت محلياً على جهاز الكاشير ويعمل دون الحاجة لأي اتصال بالإنترنت.</td>
+    </tr>
+    <tr>
+      <td><strong>محرك قاعدة البيانات</strong></td>
+      <td><strong>PostgreSQL 15 (Enterprise RDBMS)</strong><br/>يدعم ملايين السجلات، المعاملات المتزامنة عالية الكثافة، وسلامة العمليات ACID الصارمة.</td>
+      <td><strong>SQLite مدمج محلياً (Embedded Single-file)</strong><br/>قاعدة بيانات خفيفة وسريعة جداً في ملف واحد محلي، مثالية لجهاز واحد.</td>
+    </tr>
+    <tr>
+      <td><strong>الأمان وتعدد المستخدمين</strong></td>
+      <td><strong>نظام مصادقة وتصاريح دقيق (JWT + Django Auth)</strong><br/>إدارة صلاحيات مفصلة لكل دور (مدير، كاشير، محاسب، أمين مخزن) وسجل تدقيق شامل.</td>
+      <td><strong>حماية ترخيص عتادية (Hardware Fingerprint)</strong><br/>ربط تشغيل البرنامج ببصمة UUID للوحة الأم والمعالج عبر <span class="code-badge">hw_device_anchor</span> لمنع القرصنة.</td>
+    </tr>
+    <tr>
+      <td><strong>سلامة بيانات المخزون</strong></td>
+      <td><strong>قيد إلزامي على مستوى محرك قاعدة البيانات:</strong><br/><span class="code-badge">CheckConstraint: product_current_stock_nonneg</span> يمنع المخزون السالب نهائياً.</td>
+      <td>معالجة برمجية عبر حركات المخزون والمطابقة المنطقية بالتطبيق دون قيد إلزامي في DDL.</td>
+    </tr>
+    <tr>
+      <td><strong>النسخ الاحتياطي وحماية البيانات</strong></td>
+      <td>نسخ احتياطي مجدول لقاعدة بيانات PostgreSQL (يتطلب تكوين سكريبت أو إدارة قاعدة بيانات).</td>
+      <td><strong>نسخ لحظي مزدوج تلقائي (Dual Rolling Snapshots):</strong><br/>توليد لقطات SQLite في مسار محلي ومسار خارجي على قرص D عند الإغلاق وتلقائياً.</td>
+    </tr>
+    <tr>
+      <td><strong>الذكاء الاصطناعي (AI)</strong></td>
+      <td><strong>تكامل محلي مع حاوية Ollama</strong> لقراءة وتحليل فواتير المشتريات الورقية (يتطلب تصحيح نموذج الرؤية).</td>
+      <td>غير متوفر نهائياً (نظام حسابات تقليدي بدون ميزات ذكاء اصطناعي).</td>
+    </tr>
+  </tbody>
+</table>
+
+<div class="page-break"></div>
+
+<h1>3. مصفوفة المقارنة التفصيلية ميزة بميزة (Detailed Matrix)</h1>
+<p>
+مصفوفة موسعة تقارن الميزات الـ 25 الرئيسية في كافة المجالات الوظيفية الـ 10، مع بيان الأدلة والتوصيات:
+</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="width: 18%;">الميزة الوظيفية</th>
+      <th style="width: 10%;">نكسورا</th>
+      <th style="width: 12%;">Smart ERP</th>
+      <th style="width: 28%;">الفروق الوظيفية الدقيقة</th>
+      <th style="width: 16%;">الدليل التقني</th>
+      <th style="width: 16%;">التوصية التطويرية</th>
+    </tr>
+  </thead>
+  <tbody>
+    <!-- الإعدادات -->
+    <tr>
+      <td><strong>هوية المتجر والإعدادات</strong></td>
+      <td><span class="status-tag status-exists">EXISTS</span></td>
+      <td><span class="status-tag status-exists">EXISTS</span></td>
+      <td>كلاهما يدير اسم المتجر، الهاتف، اللوجو، والسجل التجاري والضريبي ونسب الزيادة.</td>
+      <td>نكسورا: <span class="code-badge">settings</span><br/>سمارت: <span class="code-badge">StoreSettings</span></td>
+      <td>مكتمل ومحقق في Smart ERP.</td>
+    </tr>
+    <tr>
+      <td><strong>النسخ الاحتياطي اللحظي المزدوج</strong></td>
+      <td><span class="status-tag status-exists">EXISTS</span></td>
+      <td><span class="status-tag status-none">DOES NOT EXIST</span></td>
+      <td>نكسورا ينشئ لقطات أمان SQLite تلقائية محلياً وعلى فلاشة/قرص خارجي. سمارت يعتمد النسخ اليدوي.</td>
+      <td>نكسورا: مجلد <span class="code-badge">safety-snapshots</span> وملف <span class="code-badge">backup-path.txt</span></td>
+      <td>إضافة سكريبت مجدول لنسخ PostgreSQL على قرص خارجي.</td>
+    </tr>
+    <!-- المنتجات -->
+    <tr>
+      <td><strong>مستويات التسعير والحد الأدنى</strong></td>
+      <td><span class="status-tag status-exists">EXISTS</span></td>
+      <td><span class="status-tag status-partial">PARTIALLY EXISTS</span></td>
+      <td>نكسورا يدعم 5 مستويات أسعار مع حد أدنى لسعر البيع يمنع الكاشير من البيع بخسارة. سمارت يدعم مستويين فقط.</td>
+      <td>نكسورا: <span class="code-badge">dealer_price</span> و <span class="code-badge">minimum_price</span></td>
+      <td>إضافة سعر الموزع والحد الأدنى في موديل <span class="code-badge">Product</span>.</td>
+    </tr>
+    <tr>
+      <td><strong>تعدد الباركود للصنف الواحد</strong></td>
+      <td><span class="status-tag status-exists">EXISTS</span></td>
+      <td><span class="status-tag status-none">DOES NOT EXIST</span></td>
+      <td>نكسورا يدعم ربط أكثر من باركود بديل لنفس الصنف. سمارت يقبل باركوداً وحيداً لكل منتج.</td>
+      <td>نكسورا: جدول <span class="code-badge">product_barcodes</span></td>
+      <td>إنشاء موديل <span class="code-badge">ProductBarcode</span> وتحديث البحث السريع.</td>
+    </tr>
+    <tr>
+      <td><strong>مصفوفة المتغيرات (المقاسات/الألوان)</strong></td>
+      <td><span class="status-tag status-exists">EXISTS</span></td>
+      <td><span class="status-tag status-none">DOES NOT EXIST</span></td>
+      <td>نكسورا يدير مصفوفة مقاسات وألوان برصيد وسعر مستقل لكل متغير. سمارت لا يدعم المتغيرات.</td>
+      <td>نكسورا: جدول <span class="code-badge">product_variants</span></td>
+      <td>تأجيلها للمرحلة التوسعية القادمة.</td>
+    </tr>
+    <tr>
+      <td><strong>مصمم ملصقات الباركود المرئي</strong></td>
+      <td><span class="status-tag status-exists">EXISTS</span></td>
+      <td><span class="status-tag status-none">DOES NOT EXIST</span></td>
+      <td>نكسورا يتيح تصميم وحفظ أبعاد وهوامش استيكر الباركود المطبوع على طابعات Xprinter.</td>
+      <td>نكسورا: مفتاح <span class="code-badge">barcode_label_layout_v1</span></td>
+      <td>إضافة واجهة طباعة باركود خفيفة في React.</td>
+    </tr>
+    <!-- المخازن -->
+    <tr>
+      <td><strong>قيد منع المخزون السالب</strong></td>
+      <td><span class="status-tag status-partial">PARTIALLY EXISTS</span></td>
+      <td><span class="status-tag status-exists">EXISTS</span></td>
+      <td>سمارت ينفرد بقيد إلزامي على مستوى محرك قاعدة البيانات لمنع السالب كلياً. نكسورا يضبطه منطقياً.</td>
+      <td>سمارت: <span class="code-badge">product_current_stock_nonneg</span></td>
+      <td><strong>نقطة قوة كبرى لـ Smart ERP</strong> يجب الحفاظ عليها.</td>
+    </tr>
+    <tr>
+      <td><strong>تعدد المستودعات والتحويل المخزني</strong></td>
+      <td><span class="status-tag status-exists">EXISTS</span></td>
+      <td><span class="status-tag status-none">DOES NOT EXIST</span></td>
+      <td>نكسورا يدعم مستودعات متعددة ودورة تحويل معتمدة. سمارت يدير رصيد مستودع مركزي وحيد.</td>
+      <td>نكسورا: جداول <span class="code-badge">warehouses</span> و <span class="code-badge">stock_transfers</span></td>
+      <td>إضافة موديل <span class="code-badge">Warehouse</span> وجدول أرصدة الفروع.</td>
+    </tr>
+    <tr>
+      <td><strong>جلسات الجرد الدوري والمطابقة</strong></td>
+      <td><span class="status-tag status-exists">EXISTS</span></td>
+      <td><span class="status-tag status-none">DOES NOT EXIST</span></td>
+      <td>نكسورا ينشئ جلسات جرد تقارن آلياً بين الرصيد الدفتري والفعلي وحساب فوارق العجز والزيادة. سمارت يوفر تسوية مباشرة.</td>
+      <td>نكسورا: جداول <span class="code-badge">stock_count_sessions</span> و <span class="code-badge">lines</span></td>
+      <td>تطوير شاشة لجلسات الجرد وحساب الفوارق قبل الترحيل.</td>
+    </tr>
+    <tr>
+      <td><strong>تسجيل الهالك والتالف المعتمد</strong></td>
+      <td><span class="status-tag status-exists">EXISTS</span></td>
+      <td><span class="status-tag status-none">DOES NOT EXIST</span></td>
+      <td>نكسورا يسجل سبب التلف وتكلفته مع مسار اعتماد إداري معتمد. سمارت يقوم بتسوية رصيد فورية.</td>
+      <td>نكسورا: جدول <span class="code-badge">stock_waste</span></td>
+      <td>إضافة نوع حركة <span class="code-badge">WASTE</span> في حركات المخزون.</td>
+    </tr>
+    <!-- المشتريات -->
+    <tr>
+      <td><strong>الشراء بالكرتونة والبيع بالقطع</strong></td>
+      <td><span class="status-tag status-exists">EXISTS</span></td>
+      <td><span class="status-tag status-none">DOES NOT EXIST</span></td>
+      <td>نكسورا يتيح شراء الكرتونة بسعرها وإيداعها في المخزن بالقطع تلقائياً عبر معامل التحويل. سمارت يقبل الإدخال بالقطع فقط.</td>
+      <td>نكسورا: حقول <span class="code-badge">pack_factor</span> و <span class="code-badge">pack_price</span></td>
+      <td>إضافة حقل وحدة الشراء ومعامل التحويل لبطاقة الصنف.</td>
+    </tr>
+    <tr>
+      <td><strong>مرتجع فواتير المشتريات</strong></td>
+      <td><span class="status-tag status-exists">EXISTS</span></td>
+      <td><span class="status-tag status-none">DOES NOT EXIST</span></td>
+      <td>نكسورا يوفر دورة لإرجاع البضاعة للمورد وخصم مديونيته. سمارت يوفر مرتجع مبيعات فقط.</td>
+      <td>نكسورا: جدول <span class="code-badge">purchase_returns</span></td>
+      <td>إنشاء موديل <span class="code-badge">PurchaseReturn</span> في المشتريات.</td>
+    </tr>
+    <tr>
+      <td><strong>فاحص الفواتير بالذكاء الاصطناعي</strong></td>
+      <td><span class="status-tag status-none">DOES NOT EXIST</span></td>
+      <td><span class="status-tag status-partial">PARTIALLY EXISTS (Fails)</span></td>
+      <td>نكسورا لا يمتلك أي ذكاء اصطناعي. سمارت يمتلك واجهة ومسار API كاملين لكنه يفشل تشغيلياً بسبب استخدام نموذج نصي.</td>
+      <td>سمارت: كود <span class="code-badge">ai/services.py</span> واستدعاء Ollama</td>
+      <td>تغيير النموذج إلى نموذج بصري متعدد الوسائط أو OCR وسيط.</td>
+    </tr>
+    <!-- المبيعات والكاشير -->
+    <tr>
+      <td><strong>تعليق واستئناف الفواتير (Hold Cart)</strong></td>
+      <td><span class="status-tag status-exists">EXISTS</span></td>
+      <td><span class="status-tag status-none">DOES NOT EXIST</span></td>
+      <td>نكسورا يتيح تعليق سلة زبون بنقرة زر لخدمة زبون آخر واستئنافها لاحقاً. سمارت لا يدعم التعليق.</td>
+      <td>نكسورا: جدول <span class="code-badge">held_sales</span></td>
+      <td>إضافة ميزة تعليق السلات في واجهة React للكاشير.</td>
+    </tr>
+    <tr>
+      <td><strong>عروض الأسعار وتحويلها لفواتير</strong></td>
+      <td><span class="status-tag status-exists">EXISTS</span></td>
+      <td><span class="status-tag status-none">DOES NOT EXIST</span></td>
+      <td>نكسورا يصدر عرض سعر رسمي بفترة صلاحية ويحوله لفاتورة بيع بنقرة زر. سمارت لا يدعم عروض الأسعار.</td>
+      <td>نكسورا: جدول <span class="code-badge">quotations</span></td>
+      <td>إضافة موديل <span class="code-badge">Quotation</span> في تطبيق المبيعات.</td>
+    </tr>
+    <tr>
+      <td><strong>إلغاء الفواتير التعويضي (Sale Void)</strong></td>
+      <td><span class="status-tag status-partial">PARTIALLY EXISTS</span></td>
+      <td><span class="status-tag status-exists">EXISTS</span></td>
+      <td>سمارت يمتلك مسار <span class="code-badge">POST /api/sales/{id}/void/</span> احترافي ينفذ عمليات تعويضية كاملة (استرجاع مخزون، عكس الخزينة، إلغاء الأقساط).</td>
+      <td>سمارت: كود <span class="code-badge">inventory/views.py:677</span></td>
+      <td><strong>ميزة معمارية رائدة في Smart ERP</strong> تطابق معايير الـ ERP الكبرى.</td>
+    </tr>
+    <!-- الأقساط والعملاء -->
+    <tr>
+      <td><strong>خطط وجداول سداد الأقساط</strong></td>
+      <td><span class="status-tag status-exists">EXISTS</span></td>
+      <td><span class="status-tag status-exists">EXISTS</span></td>
+      <td>كلاهما يمتلك محرك أقساط متكامل يدير المقدم، عدد الشهور، نسبة الزيادة، وجدول الاستحقاق.</td>
+      <td>سمارت: تطبيق <span class="code-badge">installments</span> بالكامل</td>
+      <td>مكتمل ومطبق ببراعة رياضية في Smart ERP.</td>
+    </tr>
+    <tr>
+      <td><strong>برنامج نقاط الولاء للعملاء</strong></td>
+      <td><span class="status-tag status-exists">EXISTS</span></td>
+      <td><span class="status-tag status-none">DOES NOT EXIST</span></td>
+      <td>نكسورا يمنح نقاطاً عند كل شراء ويسمح باستبدالها بخصم مالي مباشر مع سقف محدد.</td>
+      <td>نكسورا: جدول <span class="code-badge">loyalty_ledger</span></td>
+      <td>إضافة حقل رصيد النقاط في بطاقة العميل.</td>
+    </tr>
+    <!-- الخزينة والورديات -->
+    <tr>
+      <td><strong>تقفيل وردية الكاشير (WorkShift)</strong></td>
+      <td><span class="status-tag status-exists">EXISTS</span></td>
+      <td><span class="status-tag status-partial">PARTIALLY EXISTS</span></td>
+      <td>نكسورا يربط كل فاتورة بيع بوردية محددة ويحسب العجز والزيادة. سمارت يمتلك موديل <span class="code-badge">WorkShift</span> ونوافذ React لكن الفاتورة لا تسجل الوردية أثناء الدفع.</td>
+      <td>سمارت: <span class="code-badge">inventory/models.py:52</span></td>
+      <td>إضافة حقل <span class="code-badge">shift</span> بموديل <span class="code-badge">Sale</span> وربطه تلقائياً عند الدفع.</td>
+    </tr>
+    <!-- النطاق المستبعد -->
+    <tr>
+      <td><strong>شؤون الموظفين والرواتب (HR)</strong></td>
+      <td><span class="status-tag status-exists">EXISTS</span></td>
+      <td><span class="status-tag status-scope">OUT OF CURRENT SCOPE</span></td>
+      <td>نكسورا يدير الحضور والانصراف والسلف. سمارت يمتلك تطبيق HR كامل بالأكواد، لكن تم استبعاده من نطاق التسليم الحالي مع حفظ الكود.</td>
+      <td>سمارت: تطبيق <span class="code-badge">hr</span> كامل بالمستودع</td>
+      <td>الحفاظ الكامل على الكود دون تفعيله في العرض.</td>
+    </tr>
+    <tr>
+      <td><strong>أتمتة الواتساب المستقلة</strong></td>
+      <td><span class="status-tag status-exists">EXISTS</span></td>
+      <td><span class="status-tag status-scope">OUT OF CURRENT SCOPE</span></td>
+      <td>نكسورا يمتلك 17 جدولاً لإرسال الفواتير وتذكيرات الأقساط بالواتساب. سمارت لا يمتلكها حالياً.</td>
+      <td>نكسورا: جداول <span class="code-badge">whatsapp_*</span></td>
+      <td>تصنيفها كفكرة تجارية مستقبلية واعدة.</td>
+    </tr>
+  </tbody>
+</table>
+
+<div class="page-break"></div>
+
+<h1>4. دراسة محوّل الأنشطة التجارية في NEXORA (Architecture Study)</h1>
+<p>
+أثبت التحليل البرمجي لقاعدة بيانات نكسورا أن تغيير النشاط التجاري (مطعم، سوبرماركت، قطع غيار، ملابس) لا ينشئ نظاماً جديداً ولا يحذف بيانات سابقة، بل يعتمد على <strong>محرك قوالب ديناميكي بمفاتيح Feature-Flags</strong> مخزن في جدول <span class="code-badge">business_template_state</span>:
+</p>
+
+<div class="card-grid">
+  <div class="card-item">
+    <h4>نشاط المطاعم والكافيهات</h4>
+    <p>يفتح إدارة الطاولات في الكاشير، طابعات المطبخ والبار، ومناديب الدليفري، ويفعل مكونات الوجبات (BOM Recipe) لخصم الخبز واللحم آلياً عند بيع الساندوتش، ويخفي الأقساط.</p>
+  </div>
+  <div class="card-item">
+    <h4>نشاط السوبرماركت والعطارة</h4>
+    <p>يفعل قراءة باركود الميزان الإلكتروني (Scale Barcode) لاحتساب أوزان الجبن واللحوم فورياً، ويفعل تتبع تواريخ الصلاحية وأرقام التشغيلات (Batches).</p>
+  </div>
+  <div class="card-item">
+    <h4>نشاط قطع غيار السيارات</h4>
+    <p>يظهر في بطاقة الصنف حقولاً تخصصية: رقم القطعة (Part Number)، الرقم الأصلي (OEM)، نوع السيارة وموديلها، وسنة الصنع ونوع المحرك.</p>
+  </div>
+</div>
+
+<div class="alert-box success">
+<strong>إمكانية تطبيق الفكرة في Smart ERP:</strong><br/>
+نستطيع بسهولة في Smart ERP إضافة حقل <span class="code-badge">business_activity</span> في إعدادات المتجر <span class="code-badge">StoreSettings</span>، ونستخدم نفس أسلوب نكسورا في واجهة React لإظهار وإخفاء التابات والأزرار وحقول النماذج ديناميكياً بحسب النشاط المختار، مما يمنح مشروعنا مرونة تجارية هائلة تخدم قطاعات متعددة من نفس الكود المصدري!
+</div>
+
+<div class="page-break"></div>
+
+<h1>5. التدفقات التجارية الرئيسية خطوة بخطوة (Key Workflows)</h1>
+
+<div class="workflow-step">
+  <h4>1. تدفق باركود الميزان الإلكتروني (Scale Barcode EAN-13 Protocol)</h4>
+  <p><strong>المنطق الفني المعتمد:</strong> عند وزن سلعة (مثل جبنة رومي وزن 500 جرام)، يطبع الميزان باركود ديناميكي يبدأ بالبادئة <span class="code-badge">20</span> يليه كود الصنف بالميزان (مثلاً 0123) يليه الوزن بالجرام (00500). عند مسح الباركود في الكاشير، يقوم السيستم فورياً باقتطاع كود الصنف وجلب سعره من الداتابيز، واقتطاع الوزن وقسمته على 1000 واحتساب إجمالي السطر آلياً.</p>
+</div>
+
+<div class="workflow-step">
+  <h4>2. تدفق الشراء بالكرتونة والبيع بالقطع (Pack Unit Conversion)</h4>
+  <p><strong>المنطق الفني المعتمد:</strong> يتم تعريف الصنف في المخزن بوحدة البيع الأساسية (قطعة)، وفي فاتورة الشراء يتيح السيستم اختيار وحدة الشراء (كرتونة) وإدخال معامل التحويل (مثلاً 24 قطعة) وسعر الكرتونة (مثلاً 240 ج). يحسب النظام إجمالي الفاتورة على أساس الكراتين، بينما يودع في المخزن 240 قطعة بمتوسط تكلفة 10 جنيهات للقطعة آلياً.</p>
+</div>
+
+<div class="workflow-step">
+  <h4>3. تدفق إلغاء الفواتير المحاسبي والعمليات التعويضية (Sale Void Workflow)</h4>
+  <p><strong>المنطق الفني المعتمد في Smart ERP:</strong> عملاً بمبدأ <span class="code-badge">Posted Sales are Immutable</span>، يمنع Smart ERP حذف أي فاتورة بيع صادرة؛ وعند طلب الإلغاء عبر <span class="code-badge">POST /api/sales/{id}/void/</span> يقوم النظام بعمليات تعويضية ذرية كاملة: استرجاع كميات المخزون وتوليد حركة مخزنية، توليد قيود عكسية بالخزينة، إلغاء الأقساط ورد المبالغ المحصلة، وعكس رصيد العميل الآجل.</p>
+</div>
+
+<div class="workflow-step">
+  <h4>4. تدفق تقفيل وردية الكاشير وحساب فوارق النقدية (WorkShift Reconciliation)</h4>
+  <p><strong>المنطق الفني المعتمد:</strong> عند إغلاق الوردية، يُدخل أمين الصندوق النقدية الفعلية الموجودة بالدرج دون معرفة الرصيد المتوقع؛ يحسب النظام النقدية المتوقعة من واقع مبيعات الوردية المسجلة، ويظهر فارق العجز أو الزيادة مع إلزام الكاشير بتبرير الفرق قبل اعتماد الإغلاق وترحيل النقدية للخزينة الرئيسية.</p>
+</div>
+
+<div class="page-break"></div>
+
+<h1>6. خارطة طريق التطوير المستقل لنظام Smart ERP</h1>
+<p>
+لتحويل Smart ERP إلى منتج تجاري منافس، رتب الفريق أولويات التطوير التنفيذية وفق مرحلتين واضحتين:
+</p>
+
+<h2>المرحلة الأولى: مكاسب فورية سريعة (Quick Wins — جهد منخفض وأثر فوري)</h2>
+<ol>
+  <li><strong>استكمال دورة إغلاق الوردية (WorkShift):</strong> إضافة حقل <span class="code-badge">shift = models.ForeignKey(WorkShift)</span> إلى موديل <span class="code-badge">Sale</span> لربط فواتير المبيعات تلقائياً بالوردية المفتوحة أثناء الدفع وإحكام مطابقة النقدية.</li>
+  <li><strong>إضافة تعليق واستئناف الفواتير (Hold Cart):</strong> إضافة زر تعليق السلة في واجهة كاشير React وتخزينها في <span class="code-badge">localStorage</span> لتسريع خدمة الزبائن في طوابير الكاشير.</li>
+  <li><strong>حماية الأرباح بالحد الأدنى للبيع:</strong> إضافة حقل <span class="code-badge">min_selling_price</span> وسعر الموزع بموديل <span class="code-badge">Product</span> لمنع الكاشير من البيع بأقل من سعر التكلفة.</li>
+  <li><strong>دعم تعدد الباركود وقراءة باركود الميزان:</strong> إنشاء موديل <span class="code-badge">ProductBarcode</span> ودمج منطق قراءة باركود الوزن EAN-13 التلقائي في شاشة الـ POS.</li>
+</ol>
+
+<h2>المرحلة الثانية: ترقيات تشغيلية جوهرية (Core Upgrades)</h2>
+<ol>
+  <li><strong>تصحيح معالج فواتير الشراء بالذكاء الاصطناعي:</strong> استبدال النموذج النصي الحالي <span class="code-badge">qwen2.5:3b</span> بنموذج رؤية بصرية متعدد الوسائط على حاوية Ollama أو دمج محرك استخلاص نصوص وسيط (OCR) لمعالجة صور الفواتير الورقية بنجاح.</li>
+  <li><strong>وحدة الشراء المزدوجة ومعامل التحويل:</strong> تمكين إدخال فواتير المشتريات بالكرتونة وسعر الكرتونة وإيداعها آلياً بالقطع في المخزن.</li>
+  <li><strong>مرتجع فواتير المشتريات:</strong> إنشاء موديول <span class="code-badge">PurchaseReturn</span> معتمداً على منطق مرتجع المبيعات المتقن المنفذ حالياً في Smart ERP.</li>
+  <li><strong>جلسات الجرد الدوري وتعدد المستودعات:</strong> بناء نموذج جرد دوري يقارن الفعلي بالدفتري، وإضافة موديول المستودعات المتعددة والتحويلات الداخلية.</li>
+</ol>
+
+<div class="alert-box warning">
+<strong>موقف الموديولات خارج نطاق المشروع الحالي (Out of Scope):</strong><br/>
+يؤكد التقرير أن كود <strong>شؤون الموظفين والرواتب (HR & Payroll)</strong> محفوظ ومبرمج بالكامل في مستودع المشروع ولم يتم مساسه، ولكنه مصنف رسمياً كخارج نطاق التقييم والعرض للمرحلة الحالية، وكذلك <strong>وحدة أتمتة رسائل الواتساب</strong> التي تم تأجيلها كميزة تجارية لمراحل الإنتاج اللاحقة.
+</div>
+
+<h1>7. الخاتمة والتوصيات للأستاذ المشرف</h1>
+<p>
+أثبتت هذه الدراسة المقارنة أن مشروع تخرجنا <strong>Smart ERP</strong> يمتلك أساساً معمارياً متقدماً يتفوق على الأنظمة المكتبية التقليدية كنظام ويب سحابي حديث مبني بتقنيات React و Django مع قاعدة بيانات PostgreSQL متينة، ويتميز بوجود قيود إجبارية صارمة لمنع المخزون السالب، وتطبيق أقساط متكامل الصياغة، ونظام إلغاء تعويضي احترافي للفواتير.
+</p>
+<p>
+وفي المقابل، أمدتنا دراسة النظام التجاري المرجعي <strong>NEXORA Store</strong> بلمسات السوق الواقعية (كالشراء بالكرتونة، تعليق السلال، باركود الميزان، والنسخ اللحظي المزدوج) التي ستشكل خطتنا التطويرية القادمة لترقية مشروع التخرج إلى منتج منافس في سوق العمل.
+</p>
+<p style="text-align: center; font-weight: bold; margin-top: 30px; color: #1e3a8a;">
+والله ولي التوفيق،،،<br/>
+فريق عمل مشروع Smart ERP
+</p>
+
+</body>
+</html>
