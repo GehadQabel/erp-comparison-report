@@ -2,6 +2,9 @@
 <html dir="rtl" lang="ar">
 <head>
 <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+<meta name="theme-color" content="#1e3a8a">
+<meta name="description" content="دراسة مقارنة تنافسية وهندسية شاملة بين نظام Smart ERP ونظام NEXORA Store المرجعي">
 <title>تقرير المقارنة التنافسية الشاملة - Smart ERP مقابل NEXORA Store</title>
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap');
@@ -304,9 +307,327 @@
     margin: 0;
     color: #475569;
   }
+
+  /* Responsive Web & Mobile Overrides */
+  @media screen {
+    body {
+      background-color: #f1f5f9;
+      padding: 0;
+      margin: 0;
+      font-size: 15px;
+      color: #1e293b;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .report-wrapper {
+      max-width: 1140px;
+      margin: 20px auto 40px auto;
+      background: #ffffff;
+      padding: 40px 35px;
+      border-radius: 16px;
+      box-shadow: 0 10px 35px -5px rgba(15, 23, 42, 0.08), 0 0 1px rgba(15, 23, 42, 0.1);
+      box-sizing: border-box;
+    }
+
+    .quick-nav-bar {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(30, 58, 138, 0.96);
+      backdrop-filter: blur(8px);
+      color: #ffffff;
+      padding: 10px 16px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+      border-bottom: 2px solid #3b82f6;
+    }
+
+    .quick-nav-container {
+      max-width: 1140px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+    }
+
+    .quick-nav-title {
+      font-weight: 800;
+      font-size: 14px;
+      color: #93c5fd;
+      white-space: nowrap;
+    }
+
+    .quick-nav-links {
+      display: flex;
+      gap: 8px;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      scrollbar-width: none;
+      padding: 4px 0;
+    }
+    .quick-nav-links::-webkit-scrollbar {
+      display: none;
+    }
+
+    .quick-nav-links a {
+      color: #f8fafc;
+      text-decoration: none;
+      font-size: 13px;
+      font-weight: 600;
+      padding: 5px 12px;
+      border-radius: 20px;
+      background: rgba(255, 255, 255, 0.12);
+      white-space: nowrap;
+      transition: all 0.2s ease;
+    }
+
+    .quick-nav-links a:hover {
+      background: #3b82f6;
+      color: #ffffff;
+    }
+
+    .print-btn {
+      background: #10b981;
+      color: #ffffff;
+      border: none;
+      padding: 6px 14px;
+      border-radius: 6px;
+      font-family: 'Cairo', sans-serif;
+      font-size: 12px;
+      font-weight: 700;
+      cursor: pointer;
+      white-space: nowrap;
+      transition: background 0.2s;
+    }
+    .print-btn:hover {
+      background: #059669;
+    }
+
+    .cover-page {
+      height: auto !important;
+      min-height: auto !important;
+      padding: 30px 20px;
+      border-radius: 12px;
+      margin-bottom: 30px;
+      border: 2px solid #1e3a8a;
+      background: linear-gradient(180deg, #f8fafc 0%, #ffffff 100%);
+    }
+
+    .cover-title {
+      font-size: clamp(1.4rem, 3.5vw, 2.2rem);
+      line-height: 1.35;
+    }
+    .cover-subtitle {
+      font-size: clamp(0.95rem, 2vw, 1.25rem);
+    }
+
+    .cover-systems {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 16px;
+      margin: 24px 0;
+    }
+
+    .cover-footer {
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 14px;
+    }
+
+    .table-responsive {
+      width: 100%;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      margin: 12px 0 24px 0;
+      border-radius: 10px;
+      border: 1px solid #cbd5e1;
+      background: #ffffff;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.03);
+    }
+
+    .table-responsive table {
+      width: 100%;
+      min-width: 820px;
+      margin: 0;
+      border-collapse: collapse;
+      font-size: 13.5px;
+    }
+
+    .table-responsive th {
+      padding: 10px 12px;
+      font-size: 13.5px;
+      position: sticky;
+      top: 0;
+    }
+
+    .table-responsive td {
+      padding: 9px 12px;
+      font-size: 13px;
+      line-height: 1.6;
+    }
+
+    .scroll-hint {
+      display: none;
+      background: #eff6ff;
+      color: #1e40af;
+      border: 1px dashed #93c5fd;
+      border-radius: 8px;
+      padding: 8px 12px;
+      font-size: 12.5px;
+      font-weight: 700;
+      text-align: center;
+      margin: 12px 0 6px 0;
+    }
+
+    .scroll-top-btn {
+      display: none;
+      position: fixed;
+      bottom: 24px;
+      left: 24px;
+      z-index: 999;
+      background: #1e3a8a;
+      color: #ffffff;
+      border: none;
+      padding: 10px 16px;
+      border-radius: 30px;
+      font-family: 'Cairo', sans-serif;
+      font-size: 13px;
+      font-weight: 700;
+      cursor: pointer;
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25);
+      transition: all 0.2s;
+    }
+    .scroll-top-btn:hover {
+      background: #2563eb;
+      transform: translateY(-2px);
+    }
+  }
+
+  /* Mobile Screens (Phone & Small Tablet) */
+  @media screen and (max-width: 768px) {
+    body {
+      background-color: #ffffff;
+    }
+    .report-wrapper {
+      padding: 18px 12px;
+      margin: 0;
+      border-radius: 0;
+      box-shadow: none;
+      max-width: 100%;
+    }
+    .quick-nav-bar {
+      padding: 8px 10px;
+    }
+    .quick-nav-title {
+      display: none;
+    }
+    .print-btn {
+      display: none;
+    }
+    .cover-page {
+      padding: 18px 10px;
+      margin-bottom: 20px;
+    }
+    .cover-header h3 {
+      font-size: 13px;
+    }
+    .cover-header h4 {
+      font-size: 11px;
+    }
+    .cover-badge {
+      font-size: 11px;
+      padding: 6px 12px;
+    }
+    .cover-title {
+      font-size: 1.35rem;
+    }
+    .cover-subtitle {
+      font-size: 0.95rem;
+    }
+    .cover-footer {
+      flex-direction: column;
+      text-align: right;
+      gap: 6px;
+      font-size: 11px;
+    }
+    h1 {
+      font-size: 1.25rem;
+      margin-top: 20px;
+    }
+    h2 {
+      font-size: 1.05rem;
+    }
+    p, li {
+      font-size: 13.5px;
+      line-height: 1.65;
+    }
+    .alert-box {
+      font-size: 13px;
+      padding: 10px 12px;
+    }
+    .card-grid {
+      grid-template-columns: 1fr;
+      gap: 10px;
+    }
+    .scroll-hint {
+      display: block;
+    }
+    .workflow-step {
+      padding: 10px;
+    }
+    .workflow-step h4 {
+      flex-direction: column;
+      gap: 4px;
+      font-size: 13.5px;
+    }
+    .workflow-step p {
+      font-size: 13px;
+    }
+  }
+
+  /* Print Layout Preserved Exact */
+  @media print {
+    .quick-nav-bar, .scroll-hint, .scroll-top-btn, .print-btn {
+      display: none !important;
+    }
+    .report-wrapper {
+      padding: 0 !important;
+      margin: 0 !important;
+      box-shadow: none !important;
+      max-width: 100% !important;
+    }
+    .cover-page {
+      height: 90vh !important;
+    }
+  }
+
 </style>
 </head>
 <body>
+
+<!-- شريط التنقل السريع التجاوبي -->
+<nav class="quick-nav-bar" id="quickNav">
+  <div class="quick-nav-container">
+    <span class="quick-nav-title">⚡ تصفح سريع:</span>
+    <div class="quick-nav-links">
+      <a href="#sec-intro">المقدمة</a>
+      <a href="#sec-arch">المقارنة المعمارية</a>
+      <a href="#sec-matrix">المصفوفة التفصيلية</a>
+      <a href="#sec-switch">الأنشطة التجارية</a>
+      <a href="#sec-workflows">التدفقات التشغيلية</a>
+      <a href="#sec-roadmap">خارطة الطريق</a>
+      <a href="#sec-conclusion">الخاتمة</a>
+    </div>
+    <button class="print-btn" onclick="window.print()">🖨️ طباعة / PDF</button>
+  </div>
+</nav>
+
+<div class="report-wrapper">
 
 <!-- صفحة الغلاف -->
 <div class="cover-page">
@@ -350,7 +671,7 @@
 
 <!-- بداية المحتوى -->
 
-<h1>1. المقدمة المنهجية وأهداف الدراسة</h1>
+<h1 id="sec-intro">1. المقدمة المنهجية وأهداف الدراسة</h1>
 <p>
 يأتي هذا التقرير استجابةً لمتطلبات تقييم مشروع تخرج <strong>Smart ERP</strong> من خلال إجراء دراسة مقارنة تنافسية واقعية مع أحد الأنظمة التجارية واسعة الانتشار في السوق المحلي المصري والعربي وهو <strong>NEXORA Store (الإصدار 0.1.22)</strong>.
 </p>
@@ -373,17 +694,19 @@
 
 <div class="page-break"></div>
 
-<h1>2. المقارنة المعمارية والتقنية الشاملة</h1>
+<h1 id="sec-arch">2. المقارنة المعمارية والتقنية الشاملة</h1>
 <p>
 يمثل الجدول التالي تحليلاً هندسياً دقيقاً للفروق الجوهرية في البنية التحتية بين النظامين:
 </p>
 
+<div class="scroll-hint">👈 اسحب الجدول أفقياً لتصفح المقارنة المعمارية 👉</div>
+<div class="table-responsive">
 <table>
   <thead>
     <tr>
-      <th style="width: 22%;">المحور المعماري</th>
-      <th style="width: 39%;">نظام Smart ERP (مشروع التخرج)</th>
-      <th style="width: 39%;">نظام NEXORA Store (المرجع التجاري)</th>
+      <th style="min-width: 160px; width: 22%;">المحور المعماري</th>
+      <th style="min-width: 280px; width: 39%;">نظام Smart ERP (مشروع التخرج)</th>
+      <th style="min-width: 280px; width: 39%;">نظام NEXORA Store (المرجع التجاري)</th>
     </tr>
   </thead>
   <tbody>
@@ -419,23 +742,26 @@
     </tr>
   </tbody>
 </table>
+</div>
 
 <div class="page-break"></div>
 
-<h1>3. مصفوفة المقارنة التفصيلية ميزة بميزة (Detailed Matrix)</h1>
+<h1 id="sec-matrix">3. مصفوفة المقارنة التفصيلية ميزة بميزة (Detailed Matrix)</h1>
 <p>
 مصفوفة موسعة تقارن الميزات الـ 25 الرئيسية في كافة المجالات الوظيفية الـ 10، مع بيان الأدلة والتوصيات:
 </p>
 
+<div class="scroll-hint">👈 اسحب الجدول أفقياً لتصفح كافة أعمدة المصفوفة الـ 25 👉</div>
+<div class="table-responsive">
 <table>
   <thead>
     <tr>
-      <th style="width: 18%;">الميزة الوظيفية</th>
-      <th style="width: 10%;">نكسورا</th>
-      <th style="width: 12%;">Smart ERP</th>
-      <th style="width: 28%;">الفروق الوظيفية الدقيقة</th>
-      <th style="width: 16%;">الدليل التقني</th>
-      <th style="width: 16%;">التوصية التطويرية</th>
+      <th style="min-width: 140px; width: 18%;">الميزة الوظيفية</th>
+      <th style="min-width: 80px; width: 10%;">نكسورا</th>
+      <th style="min-width: 100px; width: 12%;">Smart ERP</th>
+      <th style="min-width: 260px; width: 28%;">الفروق الوظيفية الدقيقة</th>
+      <th style="min-width: 160px; width: 16%;">الدليل التقني</th>
+      <th style="min-width: 180px; width: 16%;">التوصية التطويرية</th>
     </tr>
   </thead>
   <tbody>
@@ -617,10 +943,11 @@
     </tr>
   </tbody>
 </table>
+</div>
 
 <div class="page-break"></div>
 
-<h1>4. دراسة محوّل الأنشطة التجارية في NEXORA (Architecture Study)</h1>
+<h1 id="sec-switch">4. دراسة محوّل الأنشطة التجارية في NEXORA (Architecture Study)</h1>
 <p>
 أثبت التحليل البرمجي لقاعدة بيانات نكسورا أن تغيير النشاط التجاري (مطعم، سوبرماركت، قطع غيار، ملابس) لا ينشئ نظاماً جديداً ولا يحذف بيانات سابقة، بل يعتمد على <strong>محرك قوالب ديناميكي بمفاتيح Feature-Flags</strong> مخزن في جدول <span class="code-badge">business_template_state</span>:
 </p>
@@ -647,7 +974,7 @@
 
 <div class="page-break"></div>
 
-<h1>5. التدفقات التجارية الرئيسية خطوة بخطوة (Key Workflows)</h1>
+<h1 id="sec-workflows">5. التدفقات التجارية الرئيسية خطوة بخطوة (Key Workflows)</h1>
 
 <div class="workflow-step">
   <h4>1. تدفق باركود الميزان الإلكتروني (Scale Barcode EAN-13 Protocol)</h4>
@@ -671,7 +998,7 @@
 
 <div class="page-break"></div>
 
-<h1>6. خارطة طريق التطوير المستقل لنظام Smart ERP</h1>
+<h1 id="sec-roadmap">6. خارطة طريق التطوير المستقل لنظام Smart ERP</h1>
 <p>
 لتحويل Smart ERP إلى منتج تجاري منافس، رتب الفريق أولويات التطوير التنفيذية وفق مرحلتين واضحتين:
 </p>
@@ -697,7 +1024,7 @@
 يؤكد التقرير أن كود <strong>شؤون الموظفين والرواتب (HR & Payroll)</strong> محفوظ ومبرمج بالكامل في مستودع المشروع ولم يتم مساسه، ولكنه مصنف رسمياً كخارج نطاق التقييم والعرض للمرحلة الحالية، وكذلك <strong>وحدة أتمتة رسائل الواتساب</strong> التي تم تأجيلها كميزة تجارية لمراحل الإنتاج اللاحقة.
 </div>
 
-<h1>7. الخاتمة والتوصيات للأستاذ المشرف</h1>
+<h1 id="sec-conclusion">7. الخاتمة والتوصيات للأستاذ المشرف</h1>
 <p>
 أثبتت هذه الدراسة المقارنة أن مشروع تخرجنا <strong>Smart ERP</strong> يمتلك أساساً معمارياً متقدماً يتفوق على الأنظمة المكتبية التقليدية كنظام ويب سحابي حديث مبني بتقنيات React و Django مع قاعدة بيانات PostgreSQL متينة، ويتميز بوجود قيود إجبارية صارمة لمنع المخزون السالب، وتطبيق أقساط متكامل الصياغة، ونظام إلغاء تعويضي احترافي للفواتير.
 </p>
@@ -709,5 +1036,20 @@
 فريق عمل مشروع Smart ERP
 </p>
 
+</div><!-- /.report-wrapper -->
+
+<!-- زر العودة للأعلى -->
+<button id="scrollTopBtn" class="scroll-top-btn" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">↑ للأعلى</button>
+
+<script>
+window.onscroll = function() {
+  const btn = document.getElementById('scrollTopBtn');
+  if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+    btn.style.display = 'block';
+  } else {
+    btn.style.display = 'none';
+  }
+};
+</script>
 </body>
 </html>
